@@ -35,6 +35,10 @@ sese.exe 					Main program
 ```
 
 Each scene folder contains the annotated PLY, XML, and trajectory.log. This is the minimum data required to launch the annotation program. If depth and color images are extracted (from synchronized ONI files), please put them into the depth and images folder as shown in the folder tree above. 
+
+We assume that color is stored at each vertex in the triangle mesh, which means that for accurate texture, the subdivision of the mesh has to be relatively fine. For mesh extracted by marching cubes from Kinect Fusion and its descendants, this subdivision is usually good enough. 
+
+It is also possible to use this tool to annotate meshes reconstructed by multiple view geometry, i.e., from VisualSFM + CMPMVS. One just has to ensure that the mesh fits the above assumption to some good extents. Note that this feature is not quite carefully tested, but please feel free to experiment. 
 	  
 # Launch
 To visual the scene mesh, simply go to sandbox folder and execute
