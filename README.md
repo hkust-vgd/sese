@@ -143,6 +143,13 @@ Or press `Shift + S` to save.
 
 * Please open new issue tickets on Github for questions and bug reports. Thanks!
 
+# Loading Kinect v2 scenes 
+By default, this program will attempt to look for `asus.ini` in the scene data folder. If this is not found, it will attempt to find `kinect2.ini`. When both files are not available, the program fallbacks to loading `ini/asus.ini` which is the default intrinsic parameters included with this program. 
+
+Therefore, to load Kinect v2 scene, in the scene data folder, make sure that `kinect2.ini` is available. 
+The structure of this file should be similar to `ini/asus.ini`, with image sizes set to resolution of Kinect v2. 
+For current Kinect v2 scenes, we downsample all color images to the depth map resolution, which is to 512x424. 
+
 # License 
 
 Our annotation tool adopts various open-source projects including
