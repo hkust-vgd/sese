@@ -63,7 +63,7 @@ Key | Description
 `Alt` | switch to display small labels on the fly. 
 `Shift + Left drag` | merge two labels. 
 `Alt + Left drag` | extract a small label / group small labels into a big label.
-`Ctrl + Left drag` | split a big label into several small labels.  In practice, aavoid using this as its result could be messy.
+`Ctrl + Left drag` | split a big label into several small labels.  In practice, avoid using this as its result could be messy.
 `Left click` | show the bounding box of the current label.
 
 A comprehensive list of supported keyboard shortcuts is as below.
@@ -80,20 +80,26 @@ Key | Description
 `C` | toggle displaying camera trajectory
 `S` | save current screen to image. The images are stored screenshots/ folder, named image000.png, image001.png, and so on. 
 `P` | batch screenshot. Export screenshots for grey mesh, segmented mesh, bounding boxes. 
-`Shift + A` | switch to object pose adjustment mode. In this mode, press 'x' to select the active axis, and Shift + left drag to adjust the pose. 
-`G` | switch to floor alignment mode.
 `Shift + S` | save (overwrite) current scene to PLY, XML, trajectory.log. 
- `Z` | undo 
+`Shift + E` | save 2D labels (solid color). 
+`Shift + B` | save 2D labels (blended with input color images).
+ `Z` | undo
  `Q` | exit 
 
 # Operation modes
-The main operation mode is label interaction. This mode is designed for user to merge, extract, and split existing segments. 
+The main operation mode is label interaction. This mode is designed for user to merge, extract, and split existing segments as described in the paper.
 
-In addition, this program also comes with two other operation modes as follows.
+Additionally, when user clicks on a segment, the bounding box of the segment will be shown. If one clicks on the sides of the bounding box, its corresponding face will be highlighted. One can drag to adjust the size of the bounding boxes, which in turn discards all labels that are out of the bounding box from the selected segment. 
+
+This program also comes with two other operation modes as follows.
+
 - *Floor alignment mode*: usually the scene should have its floor aligned with the XZ axis, but the mesh from 3D reconstruction program might not have this property. Floor alignment mode is designed to address this issue. Press `G` to switch to this mode, and click on a segment on the floor to move the origin of the coordinate system there. 
 Current implementation requires that the floor adjusted scene has to be saved, the program restarted before proceeding to other segmentation tasks. 
 
 - *Object pose editing mode*: In this mode, the local XYZ axes for a segment is displayed. User can specify the front direction of the segment by aligning the local Z-axis accordingly. 
+
+In this mode, press `X` to select the active axis (highlighted in bold), and `Shift + Left drag` to adjust the pose.
+
 This is not the best UI for specifying object poses, but it's relatively simple to use. We are investigating more efficient approaches and will release when they are ready. Stay tuned!
 
 # Display modes
@@ -136,6 +142,16 @@ Or press `Shift + S` to save.
 * It is better not to merge labels and tag objects at the same time. We tried this workflow but found that it is not convenient with the current design of the program. Segment first. Annotate later.
 
 * Please open new issue tickets on Github for questions and bug reports. Thanks!
+
+# License 
+
+Our annotation tool adopts various open-source projects including
+
+* [RPly](http://w3.impa.br/~diego/software/rply/) for PLY read and write.
+* [The VCG library](http://vcg.isti.cnr.it/vcglib/) for PLY read and write.
+* SSAO shaders from [LearnOpenGL](http://learnopengl.com/#!Advanced-Lighting/SSAO) 
+* [GLEW](http://glew.sourceforge.net/) for OpenGL extension.
+* [Qt](https://www.qt.io/) for building UI. 
 
 # Disclaimer 
 Copyright (c) 2015-2016 Singapore University of Technology and Design
