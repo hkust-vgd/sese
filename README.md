@@ -1,5 +1,6 @@
 # Introduction
-This is a short document for `sese`, the annotation tool we developed to annotate the SceneNN dataset. 
+This is a short document for `sese`, the annotation tool for the SceneNN dataset. 
+To download, please navigate to <https://github.com/scenenn/sese/releases>
 
 As of October 2016, this tool is released in binary format for 64-bit Windows. It is possible to compile the tool under Linux. Please contact us for more details if you are interested. 
 
