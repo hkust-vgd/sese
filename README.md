@@ -1,10 +1,10 @@
 # Introduction
-This is a short document for `sese`, the annotation tool for the SceneNN dataset. 
+`sese` is a user interactive scene mesh annotation tool. It has been used to annotate more than 100 scenes in the SceneNN dataset. 
 To download, please navigate to <https://github.com/scenenn/sese/releases>
 
-As of October 2016, this tool is released in binary format for 64-bit Windows. It is possible to compile the tool under Linux. Please contact us for more details if you are interested. 
+We provide binary releases of the tool on Windows and Linux (Ubuntu 16.04 LTS). Please contact us for more details if you are interested in using the tool on other platforms.
 
-This program is still in experimental stage even though we found it quite stable for our internal use. Please read the disclaimer at the end of this document before using the tool. 
+Please read the disclaimer at the end of this document before using the tool. 
 
 Please cite our technical report 
     
@@ -162,6 +162,6 @@ Our annotation tool adopts various open-source projects including
 * [Qt](https://www.qt.io/) for building UI. 
 
 # Disclaimer 
-Copyright (c) 2015-2016 Singapore University of Technology and Design
+Copyright (c) 2015-2017 Singapore University of Technology and Design
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
